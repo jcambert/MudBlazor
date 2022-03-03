@@ -1,7 +1,7 @@
 ﻿@inherits LayoutComponentBase
 @layout MainLayout
 
-<MudLayout>
+<MudLayout Class="mudblazor-docs">
     <MudAppBar Class="docs-appbar-filter" Color="Color.Transparent" Elevation="0"></MudAppBar>
     <MudAppBar Class="docs-appbar" Elevation="0">
         <Appbar DrawerToggleCallback="ToggleDrawer" DisplaySearchBar="true" />
@@ -24,7 +24,7 @@
             @if (_topMenuOpen == true)
             {
                 <MudNavMenu Color="Color.Primary" Margin="Margin.Dense" Rounded="true" Class="pa-2">
-                    <MudNavLink Href="/components/alert">Docs</MudNavLink>
+                    <MudNavLink Href="/docs/overview">Docs</MudNavLink>
                     <MudNavLink Href="/getting-started/installation">Getting Started</MudNavLink>
                     <MudNavLink Href="/mud/introduction" Match="NavLinkMatch.All">Discover More</MudNavLink>
                     <MudNavGroup Title="Products" ExpandIcon="@Icons.Material.Filled.ExpandMore">
@@ -56,7 +56,7 @@
             else if (!_topMenuOpen && LayoutService.GetDocsBasePage(NavigationManager.Uri) == DocsBasePage.DiscoverMore)
             {
                 <MudText Typo="Typo.subtitle1" Class="mt-1 mb-2 ml-2 d-flex d-md-none"><b>Discover More</b></MudText>
-                <MudNavLink Href="/mud/introduction">What is MudBlazor?</MudNavLink>
+                <MudNavLink Href="/mud/introduction" Class="docs-single-link">What is MudBlazor?</MudNavLink>
                 <MudNavGroup Title="Community" Expanded="true" HideExpandIcon="true">
                     <MudNavLink Href="/mud/community/getting-help">Getting Help</MudNavLink>
                     <MudNavLink Href="/mud/community/reporting-bugs">Reporting Bugs</MudNavLink>

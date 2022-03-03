@@ -76,8 +76,8 @@ public class LayoutService
     
     public DocsBasePage GetDocsBasePage(string uri)
     {
-        if (uri.Contains("/api/") || uri.Contains("/components/") ||
-            uri.Contains("/features/") || uri.Contains("/customization/"))
+        if (uri.Contains("/docs/") || uri.Contains("/api/") || uri.Contains("/components/") ||
+            uri.Contains("/features/") || uri.Contains("/customization/") || uri.Contains("/utilities/"))
         {
             return DocsBasePage.Docs;
         }
